@@ -1,158 +1,466 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-
-@keyframes animate {
-    0%{
-        width: 0;
-    }
-    70%{
-        width: 100%;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
-    color: #F1E7E7;
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
-*::selection {
-    background-color: #5BE9B9;
-    color: #302e2e;
+body{
+    background-color: black;
 }
-i{
-    color: #5BE9B9;
+section{
+    width: 100%;
 }
-span{
-    color: #5BE9B9;
+.divisoria{
+    height: 30vh;
 }
-/*coisas fixas*/
-
-
-/*Página 1 */
-div{
-
-    width: 45%;
-}
-
-header{
-    background-image: url(images/programacao_degrade.png);
-    background-size: cover;
-    height: 110vh;
-
-}
-header .t1{
-    position: absolute;
-    font-size: clamp(3rem, 10vw + 1rem, 13vh);
-    left: 23vh;
-    top: 27vh;
+/*fixas*/
+.s1{
     display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.anim_text{
-    position: relative;
-    font-size: clamp(3rem, 10vw + 1rem, 13vh);
-    left: 23vh;
-    top: 40vh;
-    color: #131E37;
-    -webkit-text-stroke: #1C2B4F 0.3vw;
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    
 }
-.anim_text::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
+nav div{
     height: 100%;
-    color:#5BE9B9;
-    -webkit-text-stroke: #324e32 0vw;
-    border-right: #5BE9B9 3px solid;
-    overflow: hidden;
-    animation: animate 5s infinite;
-}
-
-/*Corpo do Site*/
-main{
-    height: 300vh;
-    background:linear-gradient(#131E37 ,#1C2B4F );
-}
-/*Sobre Mim*/
-
-#sobre{
-    width: 100%;
-    padding-bottom: 70vh;   
-    padding-top: 10vh;
-}
-.title {
-    width: 100%;
+    display: flex;
     align-items: center;
+    position: block;
+    margin-left: 70%;
+    cursor: pointer;
+}
+.linha{
+    background-color: #A9A9A9;
+    width: 98%;
+    height: 0.1vh;
+}
+nav p{
+    margin:3vh;
+    font-size: 1vw;
+    font-weight: 700;
+}
+nav p:hover{
+    transition: 1s;
+    font-weight: 700;
+    display: inline;
+    background: rgb(91,233,185);
+    background: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%);                 
+    -webkit-background-clip: text;
+    color: transparent;
+   
+}
+
+/*inicio*/
+.title{
+    width: 30%;
+    font-size: 5vw;
+    display: inline;
+    font-weight:700;
+    background: rgb(91,233,185);
+    background: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%);                 
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.init{
+    padding-left: 15%;
+}
+.subtitle{
+    font-size: 5vw;
+    font-weight: 700;
+}
+.texto{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: #A9A9A9;
+    font-size: 1vw;
+    width: 50%;
+}
+.curriculo{
+    font-size: 1vw;
+    width: 20%;
+    height: 8%;
+    background-color: black;
+    border: 0.5vh solid transparent;
+    background: black;
+    background-clip: padding-box;
+    border-image: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%) 1;
+    border-radius: 5vh;/*não fica com borda*/
+}
+.inicio{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*corpo*/
+.s3{
+    height: 50vh;
+}
+.sobremim{
+    
     display: flex;
     justify-content: center;
-    padding-bottom: 0.5em;
+    align-items: start;
+    
 }
-.text{
+.img{
+    
+    background-color: #fff;
+    width: 50vh;
+    height: 50vh;
+}
+
+#content{
+    padding-left: 5%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2vh;
-    color: white;
-    text-align: center;
-    padding-bottom: 5vh;
-    margin: 0 auto;
-    width: 60%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 50%;
+    height: 100%;
 }
-/*habilidades*/
-#habilidade{
-    width: 100%;
-    padding-bottom: 70vh;   
-  
+#content h2{
+    padding-bottom: 2vh;
 }
-
-
-/*Animations*/
+.op{
+    display: flex;
+    padding-top: 1vw;
+    padding-bottom: 1vh;
+}
+.op p{
+    margin-right: 3vh;
+    font-weight: 600;
+    cursor: pointer;
+}
 .hidden{
+    display: none;
+    
+}
+
+.gradiente{
+    transition: 0.7s;
+    background: rgb(91,233,185);
+    background: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%);                 
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.h{
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1.5s;
+    
+    
+    transition: all 2s;
     
 
 }
 .show{
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+   
+   
 }
-/*#hab div:nth-child(1) {
-  transition-delay: 0.2s;  simplismente impossivel de colocar deley nesse trem*/
 
 
 
-@media (max-width: 600px) {
-
-  }
-  
-/*Hability box*/
-#hab{
-display: flex;
-width: 100%;
-align-items: center;
-justify-content: center;
+/*projetos*/
+.s4{
+    height: 120vh;
+}
+.Projetos{
+    padding-top: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
-#hab div{
-    border: solid 1px #5BE9B9;
-    border-radius: 16px;
-    color:#5BE9B9;
+.proj{
+    font-size: 2vw;
+}
+
+/*teste*/
+.Projetos{
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vw;
-    width: 15vh;
-    height: 15vh;
-    margin: 5vh;
 }
-#hab div:hover{
-    transition: 1s;
-    transform: scale(1.2);
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('rato.jpg');
+}
+.card[for="c2"] {
+    background-image: url('rato.jpg');
+}
+.card[for="c3"] {
+    background-image: url('rato.jpg');
+}
+.card[for="c4"] {
+    background-image: url('rato.jpg');
+}
+/*contato*/
+.s5{
+    
+    height: 100vh;
+    width: 100%;
+}
+.s5t h2{
+    font-size: 2vw ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.s5 div{
+    display: flex;
+}
+.space{
+    width: 20%;
+    
+}
+#contato{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.formulario{
+
+    width: 40%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    
+}
+#contato p{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: #A9A9A9;
+    font-size: 1vw;
+    width: 90%;
+}
+#contato h2{
+    font-size: 1.4vw;
+}
+/*forms*/
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A9A9A9;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    background-color: black;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%);      
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+form{
+    width: 100%;
+}
+form input{
+    display: block;
+    width: 100%;
+    background-color: black;
+}
+/*responsividade*/
+@media (max-width: 900px) {
+    nav div {
+        margin-left: 0;
+        justify-content: center; 
+    }
+
+    nav p {
+        font-size: 4vw; 
+    }
+    .linha{
+        width: 90%;
+    }
+    .title {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .init {
+        padding-left: 5%; 
+    }
+
+    .texto {
+        width: 90%; 
+        font-size: 3vw; 
+    }
+
+    .curriculo {
+        width: 40%; 
+        height: 12%;
+        font-size: 3vw; 
+    }
+    .inicio{
+        margin-top: 10vh;
+        justify-content: start;
+        height: 50vh;
+    }
+    .s3 {
+        height: auto; 
+    }
+
+    .sobremim {
+        
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .img {
+        width: 100%;
+        height: auto; 
+        max-height: 30vh; 
+    }
+
+    .content {
+        width: 90%; 
+        padding-left: 0;
+    }
+
+    .op p {
+        margin-right: 2vh;
+        font-size: 4vw; 
+    }
+
+    .op {
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+    .container{
+        width: 100%;
+    }
+    .proj{
+        
+        font-size: 3vh;
+    }
 }
