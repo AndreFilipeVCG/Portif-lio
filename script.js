@@ -47,4 +47,31 @@ const observer =new IntersectionObserver((partes) =>{
 });
    const hidden = document.querySelectorAll('.h');
 hidden.forEach((el)=> observer.observe(el));
+const button = document.getElementById('themeToggle');
+let mode="dark";
+button.addEventListener('click', function () {
+    const body = document.body;
+
+    body.classList.toggle('light-theme');
+    body.classList.toggle('dark-theme');
+    
+    if (body.classList.contains('dark-theme')) {
+        mode = "dark";
+        button.innerHTML = '<i class="fa-regular fa-sun"></i>';
+    } else {
+        mode = "light";
+        // Altere o `src` do ícone para o modo claro
+        button.innerHTML = '<i class="fa-solid fa-moon"></i>';
+}});
+
+function ir() {
+    document.querySelector('#sobrem').scrollIntoView({ behavior: 'smooth' });
+  }
+function ir2() {
+    document.querySelector('#projet').scrollIntoView({ behavior: 'smooth' });
+}
+  function ir3() {
+    document.querySelector('#cont').scrollIntoView({ behavior: 'smooth' });
+  }
+
 

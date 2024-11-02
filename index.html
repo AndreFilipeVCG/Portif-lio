@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
     <title>Portifólio André Filipe</title>
+    <script src="https://kit.fontawesome.com/22df202473.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
+<body class="dark-theme">
 
     <!--coisas fixas-->
     <section class="s1">
         <nav>
             <div>
-                <p>Sobre Mim</p>
-                <p>Projetos</p>
-                <p>Contato</p>
+                <p onclick="ir()">Sobre Mim</p>
+                <p onclick="ir2()">Projetos</p>
+                <p onclick="ir3()">Contato</p>
             </div>
-            
+
 
             
         </nav>
         <div class="linha"></div>
     </section>
+    <button id="themeToggle"><i class="fa-regular fa-sun"></i></button>     
     <!--inicio-->
     <section>
         <div class="inicio">
@@ -31,10 +34,13 @@
                 <h1 class="subtitle">
                         André Filipe
                 </h1>
-                <p class="texto"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus magni minus, blanditiis quas temporibus a soluta voluptate sit fuga voluptates dolor placeat atque veritatis tenetur adipisci distinctio saepe ducimus. Aliquid.</p>
-                 <button class="curriculo">
-                      Baixar Curriculo
-                    </button>
+                <p class="texto"> Meu nome é André Filipe, sou estudante de programação no Colégio Cotemig. Estou em busca de desenvolver e aprimorar minhas habilidades em programação, focando em criar soluções eficientes e inovadoras.</p>
+                 <div class="curricul">
+                    <h4>
+                        <a href="images/curriculo.png" download>Baixar Currículo</a>
+                    </h4>
+                      
+                 </div>
 
             </div>
             
@@ -42,16 +48,18 @@
         </div>
 
     </section>
+    <div id="sobrem"></div>
     <div class="divisoria">
 
     </div>
     <!--corpo do site-->
+    
 <section class="s3">
     <div class="sobremim">
-        <div class="img"> </div>
+        <div class="img"><img src="images/code.jpeg" alt=""> </div>
         <div class="h" id="content">
             <h2>Sobre Mim</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eveniet illum asperiores sapiente laboriosam possimus quae, velit architecto veniam, ad dolorem natus assumenda similique cupiditate nesciunt exercitationem eligendi omnis commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ea perspiciatis</p>
+            <p>Sou André Filipe, estudante de programação no Colégio Cotemig, onde estou constantemente desenvolvendo minhas habilidades em tecnologia. Tenho conhecimentos em Python, C#, HTML, CSS, JavaScript e SQL, estou focado em expandir meu aprendizado e aplicar essas competências em projetos práticos.</p>
             <div class="h">
                  <div class="op">
                 <p id="b1" class="gradiente">Habilidades</p>
@@ -84,7 +92,7 @@
     </div>
 
 </section> 
-
+<div id="projet"></div>
 
 <section class="s4">
     <div class="Projetos">
@@ -96,42 +104,30 @@
                 <input type="radio" name="slide" id="c1" checked>
                 <label for="c1" class="card">
                     <div class="row">
-                        <div class="icon">1</div>
+                        <div class="icon" href=""><a href="https://github.com/AndreFilipeVCG/Resumidor-de-videos"><i class="fa-brands fa-github" id="git" ></i></a></div>
                         <div class="description">
-                            <h4>Projeto 1</h4>
-                            <p>SA sei la oq sei la oq se la oq mais aaquilo la aquilo la do trem ae o trem daquilo la do trem do negocio de coisa</p>
+                            <h4>Resumidor de videos com IA</h4>
+                            <p>Programa em python integrado com a API do gemini que gera um resumo do video inserido na interface feita com a biblioteca do Custom Tkinter do python.</p>
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide" id="c2" >
                 <label for="c2" class="card">
                     <div class="row">
-                        <div class="icon">2</div>
+                        <div class="icon"><a href="https://github.com/AndreFilipeVCG/Site-Delivery"><i class="fa-brands fa-github" id="git" ></i></a></div>
                         <div class="description">
-                            <h4>Digital Technology</h4>
-                            <p>Gets better every day -
-                             stay tuned</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c3" >
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h4>Globalization</h4>
-                            <p>Help people all over the world</p>
+                            <h4>Site que Simula um delivery</h4>
+                            <p>Site feito com HTML e CSS que simula um site de delivery de um pizaria</p>
                         </div>
                     </div>
                 </label>
                 <input type="radio" name="slide" id="c4" >
                 <label for="c4" class="card">
                     <div class="row">
-                        <div class="icon">4</div>
+                        <div class="icon"><a href="https://github.com/AndreFilipeVCG/Python"><i class="fa-brands fa-github" id="git" ></i></a></div>
                         <div class="description">
-                            <h4>New technologies</h4>
-                            <p>Space engineering becomes
-                             more and more advanced</p>
+                            <h4>Projetos em Python</h4>
+                            <p>Entre no meu GitHub e veja todos os pequenos programas feitos em python</p>
                         </div>
                     </div>
                 </label>
@@ -140,18 +136,18 @@
 
     </div>
 
-</section>
+</section>   <div id="cont"></div>
 <!--contato-->
 <div class="s5t">
     <h2>Contato</h2>
 </div>
-    
+ 
 <section class="s5">
     <div>
         <div class="space"></div>
         <div id="contato"  class="h">
             <h2>Entre em contato</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quia est. Nesciunt similique dolor labore eos! Nobis dolore assumenda eos possimus, voluptatem, fugiat veniam asperiores natus vero doloribus sequi maxime.</p>
+            <p>Estou em busca de novas oportunidades e minha caixa de entrada está sempre aberta. Se você tiver alguma pergunta ou quiser discutir algo, sinta-se à vontade para me enviar uma mensagem!</p>
         </div>
         <div class="formulario">
             <form>

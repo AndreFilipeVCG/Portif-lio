@@ -4,10 +4,10 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    
 }
 body{
-    background-color: black;
+    transition: 1s;
 }
 section{
     width: 100%;
@@ -25,7 +25,7 @@ section{
 nav{
     width: 100%;
     height: 10vh;
-    background-color: black;
+ 
     
 }
 nav div{
@@ -56,6 +56,44 @@ nav p:hover{
     color: transparent;
    
 }
+/*trocar tema*/
+.light-theme {
+    background-color:#fff0ff;
+    color:black;
+}
+.dark-theme a{
+    color: #fff
+}
+.light-theme a{
+    color: black;
+}
+.dark-theme .curricul h4 {
+    color: white; /* Cor do texto do botão no tema escuro */
+}
+.dark-theme i{
+    color:white;
+}
+.dark-theme {
+    background-color: black;
+    color: #ffffff;
+}
+
+#themeToggle{
+    background-color: transparent;
+    border: #223 1px solid;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100%;
+    position: fixed;
+    top: 90%;
+    left: 94%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
 
 /*inicio*/
 .title{
@@ -76,28 +114,38 @@ nav p:hover{
     font-weight: 700;
 }
 .texto{
+    color: #A9A9A9;
     margin-top: 5vh;
     margin-bottom: 5vh;
-    color: #A9A9A9;
     font-size: 1vw;
     width: 50%;
 }
-.curriculo{
+.curricul{
+    cursor: pointer;
     font-size: 1vw;
     width: 20%;
     height: 8%;
-    background-color: black;
     border: 0.5vh solid transparent;
-    background: black;
     background-clip: padding-box;
     border-image: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%) 1;
-    border-radius: 5vh;/*não fica com borda*/
+    border-radius: 5vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.curricul a{
+    text-decoration: none;
 }
 .inicio{
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.light-theme .icon i{
+    color: white;
 }
 /*corpo*/
 .s3{
@@ -115,6 +163,11 @@ nav p:hover{
     background-color: #fff;
     width: 50vh;
     height: 50vh;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 #content{
@@ -250,6 +303,7 @@ nav p:hover{
 .description p {
     color: #b0b0ba;
     padding-top: 5px;
+    font-size: 0.8vw;
 }
 
 .description h4 {
@@ -270,16 +324,24 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('rato.jpg');
+    background-image: url('images/projeto1.png');
+    background-position: center;    
+    background-repeat: no-repeat; 
+    background-size: cover; 
 }
 .card[for="c2"] {
-    background-image: url('rato.jpg');
+    background-image: url('images/projeto2.png');
 }
-.card[for="c3"] {
-    background-image: url('rato.jpg');
-}
+
 .card[for="c4"] {
-    background-image: url('rato.jpg');
+    background-image: url('images/projeto4.png');
+
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+#git{
+    font-size: 1.3vw;
+    cursor: pointer;
 }
 /*contato*/
 .s5{
@@ -327,11 +389,14 @@ input:checked + label .description {
     font-size: 1.4vw;
 }
 /*forms*/
+.dark-theme .form-group input {
+    color: #fff;
+    
+}
 .form-container {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    background-color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
@@ -339,7 +404,7 @@ input:checked + label .description {
 .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #fff;
+   
 }
 
 .form-group {
@@ -350,7 +415,7 @@ input:checked + label .description {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #fff;
+   
 }
 
 .form-group input,
@@ -360,11 +425,12 @@ input:checked + label .description {
     border: 1px solid #A9A9A9;
     border-radius: 4px;
     resize: vertical;
+    background-color: transparent;
 }
 
 .form-group textarea {
     min-height: 100px;
-    background-color: black;
+    background-color: transparent;
 }
 
 .form-group button {
@@ -372,15 +438,11 @@ input:checked + label .description {
     padding: 10px;
     background-image: linear-gradient(90deg, rgba(91,233,185,1) 38%, rgba(214,255,0,1) 100%);      
     border: none;
-    color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
 }
 
-.form-group button:hover {
-    background-color: #0056b3;
-}
 form{
     width: 100%;
 }
@@ -416,7 +478,7 @@ form input{
         font-size: 3vw; 
     }
 
-    .curriculo {
+    .curricul {
         width: 40%; 
         height: 12%;
         font-size: 3vw; 
@@ -462,5 +524,56 @@ form input{
     .proj{
         
         font-size: 3vh;
+    }
+    .s5 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .s5 div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .space {
+        display: none;
+    }
+
+    #contato,
+    .formulario {
+        width: 90%;
+    }
+
+    #contato h2 {
+        font-size: 3vw;
+    }
+
+    #contato p {
+        font-size: 2vw;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form-group button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .s5t h2 {
+        font-size: 3vh;
+    }
+    #themeToggle{
+        left: 80%;
+    }
+    .img{
+        margin-bottom: 10vh;
     }
 }
